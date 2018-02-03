@@ -13,5 +13,21 @@
     <h1 data-am-0="bounceInDown" data-am-3="flipOutX">Hi there! Meet animate.js!</h1>
     <h2 data-am-1="bounceInLeft" data-am-2="flipOutY">Add slick animations to your web pages and page transitions</h2>
     <h1 data-am-4="rollIn" data-am-5="rollOut">Using animate.js is really easy!</h1>
+    <canvas id="myCanvas" width="578" height="200"></canvas>
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var centerX = canvas.width / 2;
+      var centerY = canvas.height / 2;
+      var radius = 70;
+
+      context.beginPath();
+      context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+      context.fillStyle = 'green';
+      context.fill();
+      context.lineWidth = 5;
+      context.strokeStyle = '#003300';
+      context.stroke();
+    </script>
   </body>
 </html>
