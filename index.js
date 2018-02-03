@@ -9,6 +9,7 @@ app.get('/', function(req, res){
 io.on('connection', function(socket){
 	socket.on('new message', function(msg){
 	console.log('message: ' + msg);
+    io.emit('new message', msg);
   });
   console.log('a user connected');
 });
@@ -17,3 +18,5 @@ http.listen(3000, function(){
   console.log('listening on *:3000');
 });
 
+
+    
